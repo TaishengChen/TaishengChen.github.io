@@ -1,13 +1,15 @@
-# Welcome to My Website
+# Welcome to My Page 😊
 
-## This is a basic static website using GitHub Pages
+### DIN23SP
+**TAISHENG CHEN**
 
-Here are some Markdown features:
+---
 
-- **Bold text**
-- *Italic text*
-- ~~Strikethrough text~~
+### Cloud Services ID00CS45-3008
 
-### Code Example:
-```python
-print("Hello, world!")
+
+- [x] **Week 1** assignment
+- [x] **Week 2** assignment
+- [x] **Week 3** assignment
+- [x] **Week 4** assignment
+- [x] **Week 5** assignment
