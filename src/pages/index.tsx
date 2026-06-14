@@ -41,7 +41,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Taisheng Chen - Full-stack developer</title>
+                <title>Taisheng Chen</title>
                 <meta
                     name="description"
                     content="Taisheng Chen - full-stack developer based in Oulu, Finland. Available for work."
@@ -62,7 +62,7 @@ export default function Home() {
             <footer className="mt-20 border-t border-[#E5E5E5]">
                 <div className="max-w-[1080px] mx-auto px-6 py-10 flex flex-col gap-3 items-center text-center">
                     <p className="text-[14px] text-[#6B6B6B]">
-                        Taisheng Chen · Oulu, Finland · Open to relocation
+                        Taisheng Chen · Oulu, Finland
                     </p>
                     <div className="flex items-center gap-5 text-[14px] flex-wrap justify-center">
                         <a

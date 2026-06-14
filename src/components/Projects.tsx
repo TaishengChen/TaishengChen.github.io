@@ -23,14 +23,14 @@ const projects: Project[] = [
             { label: "market",       url: "https://okiniiri.fi/market" },
         ],
     },
-    {
-        title: "Vocabulary Learning App",
-        role: "// full-stack developer · personal project",
-        date: "In development",
-        description: "A personal tool for building vocabulary from real-world text. Point your camera at any text and the app runs OCR entirely in the browser; no image is ever uploaded to a server. Tap words to save them as flashcards. Built with a privacy-first architecture; supports English, Finnish, and Spanish.",
-        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Tesseract.js", "Web Speech API"],
-        inDevelopment: true,
-    },
+    // {
+    //     title: "Vocabulary Learning App",
+    //     role: "// full-stack developer · personal project",
+    //     date: "In development",
+    //     description: "A personal tool for building vocabulary from real-world text. Point your camera at any text and the app runs OCR entirely in the browser; no image is ever uploaded to a server. Tap words to save them as flashcards. Built with a privacy-first architecture; supports English, Finnish, and Spanish.",
+    //     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Tesseract.js", "Web Speech API"],
+    //     inDevelopment: true,
+    // },
 ];
 
 export default function Projects() {

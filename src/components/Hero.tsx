@@ -14,12 +14,12 @@ export default function Hero() {
                     Taisheng Chen
                 </h1>
 
-                <p className="text-[20px] text-[#6B6B6B] mb-3">
+                {/* <p className="text-[20px] text-[#6B6B6B] mb-3">
                     Full-stack developer.
-                </p>
+                </p> */}
 
                 <p className="text-[17px] text-[#6B6B6B] leading-[1.7] max-w-[480px]">
-                    I build things end-to-end, from schema design to production deployment.
+                    Full-stack developer · Based in Oulu · Open to relocation
                 </p>
 
                 <div className="mt-7 flex gap-3 flex-wrap">

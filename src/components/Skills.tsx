@@ -1,7 +1,7 @@
 const groups: [string, string[]][] = [
-    ["Languages",       ["TypeScript", "JavaScript", "Python", "SQL"]],
-    ["Frontend",        ["Next.js", "React", "React Native", "Tailwind CSS"]],
-    ["Backend",         ["Node.js", "Express.js", "REST API Design", "JWT Auth"]],
+    ["Languages",       ["TypeScript", "JavaScript", "Python", "Java", "C","SQL"]],
+    ["Frontend",        ["Next.js", "React", "React Native"]],
+    ["Backend",         ["Node.js", "Express.js", "REST API Design"]],
     ["Database",        ["PostgreSQL", "Prisma ORM"]],
     ["DevOps & Tools",  ["Docker", "GitHub Actions", "Linux", "Cloudflare", "Swagger/OpenAPI"]],
     ["Spoken Languages", ["English (B2)", "Mandarin (native)", "Finnish (beginner)"]],
