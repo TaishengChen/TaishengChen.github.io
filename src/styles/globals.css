@@ -2,27 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scroll */
 html { scroll-behavior: smooth; }
 
-/*
- * Multi-layer fixed background — kept in CSS because Tailwind cannot express
- * a 4-layer background-size + background-attachment combo in utility classes.
- *
- * Layer 1: repeating dot grid (30 px cells, fixed to viewport)
- * Layer 2: teal radial glow — top-left
- * Layer 3: deep teal glow — top-right
- * Layer 4: solid base colour
- *
- * background-attachment: fixed locks all layers to the viewport, so the
- * gradient never tiles or seams no matter how long the page is.
- */
 body {
-  background:
-    radial-gradient(rgba(0, 173, 181, 0.045) 1px, transparent 1px),
-    radial-gradient(ellipse 72% 55% at 14% 0%,  rgba(0, 95,  110, 0.38) 0%, transparent 65%),
-    radial-gradient(ellipse 55% 44% at 86% 6%,  rgba(0, 65,  88,  0.26) 0%, transparent 60%),
-    #0a1120;
-  background-size:       30px 30px, 100% 100%, 100% 100%, auto;
-  background-attachment: fixed;
+  background: #FFFFFF;
+  color: #111111;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-fade {
+  animation: fadeInUp 0.5s ease-out forwards;
 }

@@ -1,62 +1,55 @@
 export default function Hero() {
     return (
-        <div className="relative grid grid-cols-[192px_1fr] gap-11 pt-[88px] pb-16 items-center
-                        max-[740px]:grid-cols-1 max-[740px]:text-center max-[740px]:pt-14">
-
-            <div className="max-[740px]:flex max-[740px]:justify-center">
-                <img
-                    src="/me.jpg"
-                    alt="Taisheng portrait"
-                    className="w-[168px] h-[168px] rounded-full object-cover block
-                               border-2 border-brand/30 shadow-[0_0_52px_rgba(0,173,181,0.12)]"
-                />
-            </div>
+        <div className="hero-fade grid grid-cols-[1fr_auto] gap-12 pt-[88px] pb-16 items-center
+                        max-[740px]:grid-cols-1 max-[740px]:pt-14">
 
             <div>
-                <span className="inline-flex items-center gap-[7px] text-[13px] font-semibold
-                                 tracking-[0.04em] px-3.5 py-[5px] rounded-full mb-5
-                                 bg-brand/10 border border-brand/30 text-brand">
-                    <span className="w-[7px] h-[7px] rounded-full bg-brand flex-shrink-0 animate-blink" />
-                    Open to Work
+                <span className="font-mono text-[13px] text-brand mb-5 block">
+                    // available for work
                 </span>
 
-                <h1 className="text-[58px] font-extrabold leading-[1.05] tracking-[-0.025em]
-                               mb-2 text-[#ddeeff]">
+                <h1 className="text-[52px] font-bold leading-[1.05] tracking-[-0.02em] text-[#111111] mb-3">
                     Taisheng Chen
                 </h1>
 
-                <p className="text-[20px] font-medium text-brand mb-4 tracking-[0.01em]">
-                    Software Developer
+                <p className="text-[20px] text-[#6B6B6B] mb-3">
+                    Full-stack developer.
                 </p>
 
-                <p className="text-[18px] text-slate-400 leading-[1.7] max-w-[500px]
-                              max-[740px]:max-w-full">
-                    I build and ship full stack web applications, from database design to production.
-                    I am open to frontend, backend, full stack, DevOps and data roles.
+                <p className="text-[17px] text-[#6B6B6B] leading-[1.7] max-w-[480px]">
+                    I build things end-to-end, from schema design to production deployment.
                 </p>
 
-                <div className="mt-7 flex gap-3 flex-wrap max-[740px]:justify-center">
+                <div className="mt-7 flex gap-3 flex-wrap">
                     <a
-                        href="/Taisheng-Chen-CV.pdf"
+                        href="/TaishengChen_Resume.pdf"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center justify-center h-[44px] px-5
-                                   rounded-[10px] border border-brand bg-brand text-[#001a1b]
-                                   text-[15px] font-semibold transition-all duration-200
-                                   hover:brightness-110 hover:-translate-y-px"
+                                   rounded-[10px] bg-brand text-white
+                                   text-[15px] font-semibold transition-opacity duration-200
+                                   hover:opacity-90"
                     >
-                        Download Resume
+                        Download CV
                     </a>
                     <a
                         href="#projects"
                         className="inline-flex items-center justify-center h-[44px] px-5
-                                   rounded-[10px] border border-white/[0.07] bg-transparent
-                                   text-[#ddeeff] text-[15px] font-semibold transition-all duration-200
-                                   hover:bg-white/[0.05] hover:-translate-y-px"
+                                   rounded-[10px] border border-[#E5E5E5]
+                                   text-[#111111] text-[15px] font-semibold transition-colors duration-200
+                                   hover:bg-[#F7F7F5]"
                     >
-                        View My Work
+                        View Projects ↓
                     </a>
                 </div>
+            </div>
+
+            <div className="max-[740px]:hidden">
+                <img
+                    src="/me.jpg"
+                    alt="Taisheng portrait"
+                    className="w-[160px] h-[160px] rounded-full object-cover block border border-[#E5E5E5]"
+                />
             </div>
         </div>
     );

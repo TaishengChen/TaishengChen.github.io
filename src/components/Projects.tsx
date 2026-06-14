@@ -1,140 +1,94 @@
 type Site    = { label: string; url: string };
-type Project = { title: string; blurb: string; stack: string[]; img: string; link?: string; badge?: string; sites?: Site[] };
+type Project = {
+    title: string;
+    role: string;
+    date: string;
+    description: string;
+    stack: string[];
+    sites?: Site[];
+    inDevelopment?: boolean;
+};
 
 const projects: Project[] = [
     {
-        title: "Okiniiri Web Platform",
-        blurb: "A commercial full stack web system for a local food and hospitality business in Oulu. The system includes a customer facing restaurant site with table reservations and takeaway ordering, a grocery store site, an admin management panel, and a shared REST API backend. It supports Finnish and English. Built and maintained independently over more than a year, with ongoing work.",
-        stack: ["Next.js", "TypeScript", "Express.js", "Node.js", "PostgreSQL", "Prisma", "Docker", "MUI", "i18n"],
-        img:   "/okiniiri_project.png",
-        badge: "Commercial · NDA",
+        title: "Restaurant Web Platform",
+        role: "// full-stack developer · sole contributor",
+        date: "Mar 2025 - Dec 2025",
+        description: "A local restaurant had no digital system for reservations or orders; everything ran by phone and paper, causing regular double bookings. I designed and built the complete platform from scratch: a REST API across approximately 60 endpoints with booking conflict detection and JWT authentication, two Next.js interfaces (customer-facing in Finnish and English, staff admin panel), Docker containerisation, and CI/CD via GitHub Actions. The system processed over 3,000 reservations with zero conflicts and received 10,200+ visits in its first three months.",
+        stack: ["Next.js", "TypeScript", "Express.js", "PostgreSQL", "Docker", "GitHub Actions", "Oracle Cloud", "Cloudflare"],
         sites: [
             { label: "okiniiri.fi",  url: "https://okiniiri.fi" },
-            { label: "restaurant",  url: "https://okiniiri.fi/restaurant" },
-            { label: "milktea",     url: "https://okiniiri.fi/milktea" },
-            { label: "market",      url: "https://okiniiri.fi/market" },
+            { label: "restaurant",   url: "https://okiniiri.fi/restaurant" },
+            { label: "milktea",      url: "https://okiniiri.fi/milktea" },
+            { label: "market",       url: "https://okiniiri.fi/market" },
         ],
     },
     {
         title: "Vocabulary Learning App",
-        blurb: "A full stack app for learning vocabulary from real world images. Point your camera at any text and the app runs OCR entirely in the browser. No image is ever uploaded. You tap words to select them and they are saved as flashcards in lists. Supports English, Finnish and Spanish recognition. Built with a privacy focused architecture and deployed on Vercel with Supabase.",
-        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Tesseract.js", "Web Speech API"],
-        img:   "/vocabulary.jpg",
-        badge: "In development",
+        role: "// full-stack developer · personal project",
+        date: "In development",
+        description: "A personal tool for building vocabulary from real-world text. Point your camera at any text and the app runs OCR entirely in the browser; no image is ever uploaded to a server. Tap words to save them as flashcards. Built with a privacy-first architecture; supports English, Finnish, and Spanish.",
+        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Tesseract.js", "Web Speech API"],
+        inDevelopment: true,
     },
 ];
 
 export default function Projects() {
     return (
         <>
-            <div className="flex items-center gap-3.5 mb-7">
-                <h2 className="text-[20px] font-bold tracking-[0.13em] uppercase text-brand whitespace-nowrap">
-                    Projects
-                </h2>
-                <span className="flex-1 max-w-[160px] h-px bg-gradient-to-r from-brand/30 to-transparent" />
-            </div>
+            <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">// projects</p>
 
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] gap-4">
-
+            <div className="space-y-4">
                 {projects.map((p) => (
                     <article
                         key={p.title}
-                        className="bg-[#0f1929]/80 border border-white/[0.07] p-5 px-6
-                                   rounded-[14px] backdrop-blur-sm transition-colors duration-300
-                                   hover:border-brand/[0.18] flex flex-col"
+                        className="bg-[#F7F7F5] border border-[#E5E5E5] rounded-[14px] p-6"
                     >
-                        <img
-                            src={p.img}
-                            alt=""
-                            className="w-full h-[158px] object-cover rounded-[10px] mb-3.5 bg-brand/[0.05]"
-                        />
-
-                        <div className="flex items-center gap-2.5 flex-wrap mb-2">
-                            <h3 className="text-[18px] font-bold text-[#ddeeff] m-0">{p.title}</h3>
-                            {p.badge && (
-                                <span className="text-[13px] font-semibold px-2.5 py-[3px] rounded-full
-                                                 bg-brand/[0.08] border border-brand/[0.22] text-brand">
-                                    {p.badge}
-                                </span>
-                            )}
+                        <div className="flex items-baseline justify-between gap-4 flex-wrap mb-1">
+                            <h3 className="text-[18px] font-semibold text-[#111111] m-0">{p.title}</h3>
+                            <span className="font-mono text-[13px] text-[#6B6B6B] flex-shrink-0">{p.date}</span>
                         </div>
 
-                        <p className="text-[18px] text-slate-400 leading-[1.7] m-0 flex-1">{p.blurb}</p>
+                        <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">{p.role}</p>
 
-                        <ul className="flex flex-wrap gap-1.5 p-0 mt-3.5 mb-0 list-none">
-                            {p.stack.map(s => (
+                        <p className="text-[16px] text-[#6B6B6B] leading-[1.7] mb-4">{p.description}</p>
+
+                        <ul className="flex flex-wrap gap-1.5 list-none p-0 m-0 mb-4">
+                            {p.stack.map((s) => (
                                 <li
                                     key={s}
-                                    className="text-[15px] font-medium px-3 py-[5px] rounded-full
-                                               bg-brand/[0.06] border border-brand/[0.15] text-slate-400
-                                               transition-colors duration-200 hover:border-brand/40 hover:text-[#ddeeff]"
+                                    className="font-mono text-[12px] px-2.5 py-1 rounded-md
+                                               border border-[#E5E5E5] text-[#6B6B6B]"
                                 >
                                     {s}
                                 </li>
                             ))}
                         </ul>
 
-                        {p.sites && (
-                            <div className="mt-4 pt-4 border-t border-white/[0.06]">
-                                <p className="text-[11px] font-bold tracking-[0.1em] uppercase text-slate-500 mb-2">
-                                    Live Sites
-                                </p>
-                                <div className="flex flex-wrap gap-2">
-                                    {p.sites.map(s => (
-                                        <a
-                                            key={s.url}
-                                            href={s.url}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="text-[15px] font-medium px-2.5 py-1 rounded-md
-                                                       bg-white/[0.04] border border-white/[0.07] text-slate-300
-                                                       transition-colors duration-200 hover:border-brand/40 hover:text-brand"
-                                        >
-                                            {s.label}
-                                        </a>
-                                    ))}
-                                </div>
+                        {(p.sites || p.inDevelopment) && (
+                            <div className="flex flex-wrap items-center gap-2">
+                                {p.sites?.map((s) => (
+                                    <a
+                                        key={s.url}
+                                        href={s.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="font-mono text-[12px] px-3 py-1.5 rounded-md
+                                                   bg-brand/[0.07] border border-brand/[0.2] text-brand
+                                                   hover:bg-brand/[0.12] transition-colors duration-150"
+                                    >
+                                        {s.label} ↗
+                                    </a>
+                                ))}
+                                {p.inDevelopment && (
+                                    <span className="font-mono text-[12px] text-[#6B6B6B]">
+                                        // in development
+                                    </span>
+                                )}
                             </div>
-                        )}
-
-                        {p.link && (
-                            <a
-                                href={p.link}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="inline-flex items-center gap-1 mt-3.5 text-[15px] font-semibold
-                                           text-brand border-b border-transparent transition-colors duration-200
-                                           hover:border-brand self-start"
-                            >
-                                View on GitHub
-                            </a>
                         )}
                     </article>
                 ))}
-
-                {/* More card */}
-                <article className="border border-dashed border-brand/[0.18] rounded-[14px]
-                                    flex items-center justify-center text-center min-h-[230px]
-                                    transition-all duration-300 hover:border-brand/40 hover:bg-brand/[0.03]">
-                    <div className="flex flex-col items-center gap-3 p-6">
-                        <h3 className="text-[18px] font-bold text-[#ddeeff] m-0">More in Development</h3>
-                        <p className="text-[17px] text-slate-400 max-w-[210px] leading-relaxed m-0">
-                            New projects are actively being built. See the latest work on GitHub.
-                        </p>
-                        <a
-                            href="https://github.com/TaishengChen"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center justify-center h-[40px] px-4
-                                       rounded-[10px] border border-white/[0.07] bg-transparent
-                                       text-[#ddeeff] text-[15px] font-semibold mt-1
-                                       transition-all duration-200 hover:bg-white/[0.05] hover:-translate-y-px"
-                        >
-                            GitHub Profile
-                        </a>
-                    </div>
-                </article>
-
             </div>
         </>
     );

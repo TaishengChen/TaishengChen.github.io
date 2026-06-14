@@ -4,18 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: '#00ADB5',
-        bg:    '#0a1120',
-        panel: '#0f1929',
+        brand:   '#2563EB',
+        surface: '#F7F7F5',
+        border:  '#E5E5E5',
       },
-      animation: {
-        blink: 'blink 2.4s ease-in-out infinite',
-      },
-      keyframes: {
-        blink: {
-          '0%, 100%': { opacity: '1' },
-          '50%':       { opacity: '0.2' },
-        },
+      fontFamily: {
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
     },
   },
