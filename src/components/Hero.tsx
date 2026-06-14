@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
     return (
         <div className="hero-fade grid grid-cols-[1fr_auto] gap-12 pt-[88px] pb-16 items-center
@@ -5,7 +7,7 @@ export default function Hero() {
 
             <div>
                 <span className="font-mono text-[13px] text-brand mb-5 block">
-                    // available for work
+                    {"// available for work"}
                 </span>
 
                 <h1 className="text-[52px] font-bold leading-[1.05] tracking-[-0.02em] text-[#111111] mb-3">
@@ -45,10 +47,12 @@ export default function Hero() {
             </div>
 
             <div className="max-[740px]:hidden">
-                <img
+                <Image
                     src="/me.jpg"
                     alt="Taisheng portrait"
-                    className="w-[160px] h-[160px] rounded-full object-cover block border border-[#E5E5E5]"
+                    width={160}
+                    height={160}
+                    className="rounded-full object-cover border border-[#E5E5E5]"
                 />
             </div>
         </div>

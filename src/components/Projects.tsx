@@ -36,7 +36,7 @@ const projects: Project[] = [
 export default function Projects() {
     return (
         <>
-            <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">// projects</p>
+            <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">{"// projects"}</p>
 
             <div className="space-y-4">
                 {projects.map((p) => (
@@ -82,7 +82,7 @@ export default function Projects() {
                                 ))}
                                 {p.inDevelopment && (
                                     <span className="font-mono text-[12px] text-[#6B6B6B]">
-                                        // in development
+                                        {"// in development"}
                                     </span>
                                 )}
                             </div>

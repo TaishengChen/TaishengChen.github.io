@@ -10,7 +10,7 @@ const groups: [string, string[]][] = [
 export default function Skills() {
     return (
         <>
-            <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">// skills</p>
+            <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">{"// skills"}</p>
 
             <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
                 {groups.map(([title, list]) => (

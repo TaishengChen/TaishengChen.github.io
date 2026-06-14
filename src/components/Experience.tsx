@@ -20,7 +20,7 @@ const items: Item[] = [
 export default function Experience() {
     return (
         <>
-            <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">// experience</p>
+            <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">{"// experience"}</p>
 
             <div className="space-y-4">
                 {items.map((item) => (

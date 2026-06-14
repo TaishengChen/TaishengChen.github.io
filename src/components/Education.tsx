@@ -1,7 +1,7 @@
 export default function Education() {
     return (
         <>
-            <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">// education</p>
+            <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">{"// education"}</p>
 
             <div className="bg-[#F7F7F5] border border-[#E5E5E5] rounded-[14px] p-6">
                 <div className="flex items-baseline justify-between gap-4 flex-wrap mb-1">
