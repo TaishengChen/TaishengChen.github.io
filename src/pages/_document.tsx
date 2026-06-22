@@ -11,6 +11,7 @@ export default function Document() {
                     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
                     rel="stylesheet"
                 />
+                <script defer src="https://cloud.umami.is/script.js" data-website-id="db18c850-6fca-4c97-bcf6-155faa2a0302"></script>
             </Head>
             <body>
             <Main />
