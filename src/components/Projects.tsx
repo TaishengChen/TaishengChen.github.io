@@ -28,7 +28,7 @@ const projects: Project[] = [
       "Supported deployment, release checks, troubleshooting, production maintenance, and follow-up improvements.",
     ],
     outcome:
-      "The reservation system had processed more than 2,000 non-cancelled reservations by August 2026.",
+      "The reservation system processed more than 2,000 non-cancelled reservations by August 2026.",
     stack: [
       "TypeScript",
       "Next.js",
@@ -56,9 +56,9 @@ const projects: Project[] = [
 export default function Projects() {
   return (
     <>
-      <p className="mb-4 font-mono text-[13px] text-[#6B6B6B]">
+      <h2 className="mb-4 font-mono text-[13px] font-normal text-[#6B6B6B]">
         {"// projects"}
-      </p>
+      </h2>
 
       <div className="space-y-4">
         {projects.map((project) => (

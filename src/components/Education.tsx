@@ -1,16 +1,16 @@
 export default function Education() {
   return (
     <>
-      <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">
+      <h2 className="mb-4 font-mono text-[13px] font-normal text-[#6B6B6B]">
         {"// education"}
-      </p>
+      </h2>
 
       <div className="space-y-4">
         <div className="bg-[#F7F7F5] border border-[#E5E5E5] rounded-[14px] p-6">
           <div className="flex items-baseline justify-between gap-4 flex-wrap mb-1">
-            <p className="text-[18px] font-semibold text-[#111111] m-0">
+            <h3 className="text-[18px] font-semibold text-[#111111] m-0">
               Bachelor of Engineering, Information Technology
-            </p>
+            </h3>
 
             <span className="font-mono text-[13px] text-[#6B6B6B] flex-shrink-0">
               Aug 2023 - Apr 2026
@@ -37,9 +37,9 @@ export default function Education() {
 
         <div className="bg-[#F7F7F5] border border-[#E5E5E5] rounded-[14px] p-6">
           <div className="flex items-baseline justify-between gap-4 flex-wrap mb-1">
-            <p className="text-[18px] font-semibold text-[#111111] m-0">
+            <h3 className="text-[18px] font-semibold text-[#111111] m-0">
               Erasmus+ Mobile Development Project
-            </p>
+            </h3>
 
             <span className="font-mono text-[13px] text-[#6B6B6B] flex-shrink-0">
               Feb 2025 - Apr 2025

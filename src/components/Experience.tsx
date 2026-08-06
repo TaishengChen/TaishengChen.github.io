@@ -29,9 +29,9 @@ const items: Item[] = [
 export default function Experience() {
   return (
     <>
-      <p className="font-mono text-[13px] text-[#6B6B6B] mb-4">
+      <h2 className="mb-4 font-mono text-[13px] font-normal text-[#6B6B6B]">
         {"// experience"}
-      </p>
+      </h2>
 
       <div className="space-y-4">
         {items.map((item) => (
@@ -40,9 +40,9 @@ export default function Experience() {
             className="bg-[#F7F7F5] border border-[#E5E5E5] rounded-[14px] p-6"
           >
             <div className="flex items-baseline justify-between gap-4 flex-wrap mb-1">
-              <p className="text-[18px] font-semibold text-[#111111] m-0">
+              <h3 className="m-0 text-[18px] font-semibold text-[#111111]">
                 {item.role}
-              </p>
+              </h3>
               <span className="font-mono text-[13px] text-[#6B6B6B] flex-shrink-0">
                 {item.period}
               </span>
