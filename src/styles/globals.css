@@ -18,3 +18,30 @@ body {
 .hero-fade {
   animation: fadeInUp 0.5s ease-out forwards;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111111;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+button {
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-fade {
+    animation: none;
+  }
+}
